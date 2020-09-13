@@ -1,10 +1,10 @@
 import React from "react";
-import Main from "./Main";
+import Blog from "./Blog";
 
 function App() {
   return (
     <div className="App">
-      <Main />
+      <Blog />
     </div>
   );
 }
