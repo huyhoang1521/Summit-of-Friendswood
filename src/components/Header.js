@@ -6,9 +6,6 @@ import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles((theme) => ({
-  toolbar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
-  },
   title: {
     flex: 1,
   },
@@ -28,7 +25,7 @@ export default function Header(props) {
 
   return (
     <React.Fragment>
-      <Toolbar className={classes.toolbar}>
+      <Toolbar>
         <Link
           color="inherit"
           noWrap
