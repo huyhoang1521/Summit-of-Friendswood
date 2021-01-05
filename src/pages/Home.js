@@ -6,6 +6,18 @@ import BackgroundImage from "../components/BackgroundImage";
 import Footer from "../components/Footer";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
+import EmojiTransportationIcon from '@material-ui/icons/EmojiTransportation';
+import AnnouncementIcon from '@material-ui/icons/Announcement';
+import Divider from '@material-ui/core/Divider';
+import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
+import ApartmentIcon from '@material-ui/icons/Apartment';
+import BuildIcon from '@material-ui/icons/Build';
+import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
+import FastfoodIcon from '@material-ui/icons/Fastfood';
+import VideocamIcon from '@material-ui/icons/Videocam';
+import GroupIcon from '@material-ui/icons/Group';
+import MailIcon from '@material-ui/icons/Mail';
+import StoreIcon from '@material-ui/icons/Store';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -16,6 +28,45 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(3),
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
   },
+  typographyFeatures: {
+    marginBottom: theme.spacing(2),
+    fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
+  },
+  typographySub: {
+    marginBottom: theme.spacing(3),
+    fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
+    paddingLeft: 300,
+    paddingRight: 300,
+  },
+  backgroundImage: {
+    marginBottom: theme.spacing(15),
+  },
+  grid: {
+    marginBottom: theme.spacing(15),
+  },
+  gridItems: {
+    padding: '40px'
+  },
+  gridItemsFeature: {
+    paddingLeft: 60,
+    paddingRight: 60,
+    paddingTop: 60,
+  },
+  gridItemsFeatureBottom: {
+    padding: 60
+  },
+  features: {
+    maxWidth: '75%',
+    align: 'center',
+    justify: 'center'
+  },
+  icon: {
+    marginBottom: theme.spacing(2),
+  },
+  iconFeature: {
+    width: 55,
+    height: 55,
+  }
 }));
 
 const imageText = {
@@ -32,84 +83,199 @@ export default function Home() {
     <React.Fragment>
       <CssBaseline />
       <Container className={classes.root} maxWidth={false}>
-        <main>
+        <main className={classes.backgroundImage}>
           <BackgroundImage post={imageText} />
         </main>
       </Container>
       <Grid
         container
-        maxWidth="md"
         spacing={0}
         alignItems="center"
         justify="center"
+        style={{
+    overflow: 'hidden'
+  }}
       >
-        <Grid item xs={12} md={9}>
-          <Typography
-            variant="body1"
-            gutterBottom
-            align="left"
-            className={classes.typography}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
-            aliquet lectus proin nibh nisl condimentum id venenatis. Elementum
-            tempus egestas sed sed risus pretium quam vulputate dignissim.
-            Cursus in hac habitasse platea dictumst quisque sagittis. Tempus
-            quam pellentesque nec nam aliquam sem et tortor consequat. Elementum
-            curabitur vitae nunc sed velit. Cras tincidunt lobortis feugiat
-            vivamus. Ut morbi tincidunt augue interdum velit. Sit amet porttitor
-            eget dolor morbi non. Habitant morbi tristique senectus et netus et
-            malesuada. Est velit egestas dui id ornare arcu. Donec enim diam
-            vulputate ut pharetra sit amet. Morbi tincidunt augue interdum velit
-            euismod in. Volutpat sed cras ornare arcu dui vivamus arcu.
-            Tincidunt lobortis feugiat vivamus at augue eget. Tortor at risus
-            viverra adipiscing at in tellus integer. Augue interdum velit
-            euismod in pellentesque massa placerat. Sodales ut etiam sit amet.
+        <Grid item lg={12}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm container className={classes.grid}>
+              <Grid item xs={3} className={classes.gridItems} container direction="column" spacing={2} align="center">
+                <Grid item>
+                  <Typography gutterBottom variant="subtitle1" color="textSecondary">
+                    Introduction
+                      </Typography>
+                  <Typography
+                    variant="h5"
+                    gutterBottom
+                  >
+                    CLEAN DESIGN
+                      </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </Typography>
+
+                </Grid>
+                <Divider orientation="vertical" flexItem />
+              </Grid>
+              <Divider orientation="vertical" flexItem />
+              <Grid item xs={3} className={classes.gridItems} container direction="column" spacing={2} align="center">
+                <Grid item>
+                  <ApartmentIcon className={classes.icon} fontSize="large" />
+                  <Typography variant="body2" color="textSecondary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </Typography>
+                </Grid>
+              </Grid>
+              <Divider orientation="vertical" flexItem />
+              <Grid item xs={3} className={classes.gridItems} container direction="column" spacing={2} align="center">
+                <Grid item>
+                  <BuildIcon className={classes.icon} fontSize="large" />
+                  <Typography variant="body2" color="textSecondary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </Typography>
+                </Grid>
+              </Grid>
+              <Divider orientation="vertical" flexItem />
+              <Grid item xs={3} className={classes.gridItems} container direction="column" spacing={2} align="center">
+                <Grid item>
+                  <AccessAlarmIcon className={classes.icon} fontSize="large" />
+                  <Typography variant="body2" color="textSecondary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          className={classes.features}
+          spacing={0}
+          alignItems="center"
+          justify="center"
+        >
+          <Grid item xs={12} sm={12}>
+            <Typography
+              variant="h5"
+              align="center"
+              className={classes.typographyFeatures}
+            >
+              Lorem ipsum dolor sit amet
           </Typography>
           <Typography
-            variant="body1"
-            gutterBottom
-            align="left"
-            className={classes.typography}
-          >
-            Tempor id eu nisl nunc. Sit amet nisl suscipit adipiscing bibendum
-            est ultricies integer quis. Id consectetur purus ut faucibus
-            pulvinar elementum. Faucibus et molestie ac feugiat sed lectus.
-            Tincidunt id aliquet risus feugiat in ante metus dictum at. Molestie
-            nunc non blandit massa enim nec. Diam donec adipiscing tristique
-            risus nec feugiat in. Purus sit amet luctus venenatis. Egestas purus
-            viverra accumsan in nisl nisi. Pharetra sit amet aliquam id diam
-            maecenas ultricies mi. Pretium vulputate sapien nec sagittis aliquam
-            malesuada bibendum arcu. Aenean vel elit scelerisque mauris. Dictum
-            sit amet justo donec enim diam vulputate ut. Neque egestas congue
-            quisque egestas diam in. Quam lacus suspendisse faucibus interdum
-            posuere lorem ipsum dolor sit.
+              variant="body2"
+              color="textSecondary"
+              gutterBottom
+              align="center"
+              className={classes.typographySub}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Typography>
-          <Typography
-            variant="body1"
-            gutterBottom
-            align="left"
-            className={classes.typography}
-          >
-            Enim facilisis gravida neque convallis a. Et leo duis ut diam quam
-            nulla porttitor massa. In metus vulputate eu scelerisque felis
-            imperdiet proin fermentum. Nisi vitae suscipit tellus mauris a diam
-            maecenas sed enim. Ultrices tincidunt arcu non sodales neque
-            sodales. Nulla aliquet porttitor lacus luctus accumsan tortor
-            posuere. Ac turpis egestas integer eget aliquet nibh praesent.
-            Aliquet porttitor lacus luctus accumsan. Sit amet luctus venenatis
-            lectus magna fringilla urna. Ullamcorper sit amet risus nullam.
-            Faucibus ornare suspendisse sed nisi lacus sed viverra tellus.
-            Libero enim sed faucibus turpis in eu mi. Quis imperdiet massa
-            tincidunt nunc pulvinar sapien et ligula. Sed viverra ipsum nunc
-            aliquet bibendum enim. Gravida neque convallis a cras semper.
+          </Grid>
+          <Grid item xs={12} sm={3} className={classes.gridItemsFeature} align="center">
+            <MailIcon className={classes.iconFeature}>
+            </MailIcon>
+            <Typography
+              variant="body2"
+              gutterBottom
+              align="center"
+              className={classes.typography}
+            >
+              Mailboxes
           </Typography>
+          </Grid>
+          <Grid item xs={12} sm={3} className={classes.gridItemsFeature} align="center">
+            <StoreIcon className={classes.iconFeature}></StoreIcon>
+            <Typography
+              variant="body2"
+              gutterBottom
+              align="center"
+              className={classes.typography}
+            >
+              Store
+          </Typography>
+          </Grid>
+          <Grid item xs={12} sm={3} className={classes.gridItemsFeature} align="center">
+            <EmojiTransportationIcon className={classes.iconFeature}>
+            </EmojiTransportationIcon>
+            <Typography
+              variant="body2"
+              gutterBottom
+              align="center"
+              className={classes.typography}
+            >
+              Convenient Location on FM 528
+          </Typography>
+
+          </Grid>
+          <Grid item xs={12} sm={3} className={classes.gridItemsFeature} align="center">
+            <AnnouncementIcon className={classes.iconFeature}>
+            </AnnouncementIcon>
+            <Typography
+              variant="body2"
+              gutterBottom
+              align="center"
+              className={classes.typography}
+            >
+              Reliable Building Maintenance
+          </Typography>
+          </Grid>
+          <Grid item xs={12} sm={3} className={classes.gridItemsFeatureBottom} align="center">
+            <GroupIcon className={classes.iconFeature}>
+            </GroupIcon>
+            <Typography
+              variant="body2"
+              gutterBottom
+              align="center"
+              className={classes.typography}
+            >
+              Groups
+          </Typography>
+          </Grid>
+          <Grid item xs={12} sm={3} className={classes.gridItemsFeatureBottom} align="center">
+            <VideocamIcon className={classes.iconFeature}>
+            </VideocamIcon>
+            <Typography
+              variant="body2"
+              gutterBottom
+              align="center"
+              className={classes.typography}
+            >
+              24/7 Video Surveillance
+          </Typography>
+          </Grid>
+          <Grid item xs={12} sm={3} className={classes.gridItemsFeatureBottom} align="center">
+            <FastfoodIcon className={classes.iconFeature}>
+            </FastfoodIcon>
+            <Typography
+              variant="body2"
+              gutterBottom
+              align="center"
+              className={classes.typography}
+            >
+              Food Options Nearby
+          </Typography>
+          </Grid>
+          <Grid item xs={12} sm={3} className={classes.gridItemsFeatureBottom} align="center">
+            <ContactPhoneIcon className={classes.iconFeature}>
+            </ContactPhoneIcon>
+            <Typography
+              variant="body2"
+              gutterBottom
+              align="center"
+              className={classes.typography}
+            >
+              Phone
+          </Typography>
+          </Grid>
         </Grid>
       </Grid>
-      <Footer
-        title="Footer"
-        description="Something here to give the footer a purpose!"
-      />
+      <Footer />
     </React.Fragment>
   );
 }

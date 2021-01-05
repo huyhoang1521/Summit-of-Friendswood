@@ -11,9 +11,15 @@ const useStyles = makeStyles((theme) => ({
     elevation: 0,
     borderRadius: 0,
     [theme.breakpoints.up("md")]: {
-      height: "42vw",
+      height: "45vw",
     },
-    height: "100%",
+    [theme.breakpoints.only("sm")]: {
+      height: "60vw",
+    },
+    [theme.breakpoints.only("xs")]: {
+      height: "75vw",
+    },
+    //height: "100%",
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
     marginBottom: theme.spacing(4),
@@ -47,7 +53,8 @@ export default function BackgroundImage(props) {
   return (
     <Paper
       className={classes.root}
-      style={{ backgroundImage: `url(${post.image})` }}
+      style={{ backgroundImage: `url(${post.image})`, aspectRatio: 3/2 }
+    }
     >
       {/* Increase the priority of the hero background image */}
       {

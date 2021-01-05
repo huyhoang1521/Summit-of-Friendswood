@@ -12,6 +12,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 const theme = createMuiTheme({
   shadows: ["none"],
 });
+
+
+
 const sections = [
   { title: "Lease", url: "/lease" },
   { title: "Gallery", url: "/gallery" },
@@ -23,7 +26,7 @@ function App() {
   return (
     <MuiThemeProvider theme={theme}>
       <Router>
-        <div className="App">
+        <div overflowX='hidden'>
           <CssBaseline />
           <Header title="Summit of Friendswood" sections={sections} />
           <Switch>

@@ -77,10 +77,7 @@ export default function Gallery() {
           </GridListTile>
         ))}
       </GridList>
-      <Footer
-        title="Footer"
-        description="Something here to give the footer a purpose!"
-      />
+      <Footer/>
     </div>
   );
 }
