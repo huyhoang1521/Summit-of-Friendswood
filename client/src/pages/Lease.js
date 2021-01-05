@@ -7,6 +7,9 @@ import ButtonBase from "@material-ui/core/ButtonBase";
 import { Button } from "@material-ui/core";
 import Container from "@material-ui/core/Container";
 
+// TODO - add light box (image click)
+// make header have a little more padding
+// maybe add a header image like the home page. have it say lease over it
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,

@@ -4,6 +4,7 @@ import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import Footer from "../components/Footer";
 
+// TODO - add fade animation when loading images
 const useStyles = makeStyles((theme) => ({
   root: {
     //display: "flex",
