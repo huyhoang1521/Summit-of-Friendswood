@@ -78,7 +78,7 @@ export default function Gallery() {
           </GridListTile>
         ))}
       </GridList>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

@@ -18,7 +18,6 @@ function Copyright() {
         KCTY LLC
       </Link>{" "}
       {new Date().getFullYear()}
-  
     </Typography>
   );
 }
@@ -31,28 +30,32 @@ const useStyles = makeStyles((theme) => ({
   },
   typography: {
     //marginLeft: "10px",
-    paddingBottom:5
+    paddingBottom: 5,
   },
   title: {
     //marginLeft: "5px",
-    fontWeight:700
+    fontWeight: 700,
   },
-  
+
   icon: {
-marginRight:"5px",
-width: 16,
+    marginRight: "5px",
+    width: 16,
     height: 16,
   },
   grid: {
     marginBottom: theme.spacing(8),
-    
   },
   about: {
-paddingRight:75
+    [theme.breakpoints.up("md")]: {
+      paddingRight: 75,
+    },
+    [theme.breakpoints.down("sm")]: {
+      paddingBottom: theme.spacing(6),
+    },
   },
   contact: {
-    paddingBottom:5
-  }
+    paddingBottom: 5,
+  },
 }));
 
 export default function Footer(props) {
@@ -63,18 +66,16 @@ export default function Footer(props) {
     <footer className={classes.footer}>
       <Container maxWidth="lg">
         <Grid
-        container
-        className={classes.grid}
-        spacing={0}
-        alignItems="flex-start"
-        justify="center"
-        style={{
-    overflow: 'hidden'
-  }}
-      >
-        <Grid item lg={5} className={classes.about}>
-        
-          
+          container
+          className={classes.grid}
+          spacing={0}
+          alignItems="flex-start"
+          justify="center"
+          style={{
+            overflow: "hidden",
+          }}
+        >
+          <Grid item xs={12} sm={12} md={5} lg={5} className={classes.about}>
             <Typography
               variant="subtitle1"
               gutterBottom
@@ -84,25 +85,23 @@ export default function Footer(props) {
               About
             </Typography>
             <Typography variant="body2" color="textSecondary">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-                      </Typography>
-         
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </Typography>
           </Grid>
-        <Grid item lg={2}>
-         
+
+          <Grid item xs={4} sm={3} md={2} lg={2}>
             <Typography
               variant="subtitle1"
               gutterBottom
               align="left"
               className={classes.title}
-             
             >
               Pages
             </Typography>
-         
+
             <Typography
               variant="body2"
               gutterBottom
@@ -112,8 +111,7 @@ export default function Footer(props) {
             >
               Home
             </Typography>
-         
-           
+
             <Typography
               variant="body2"
               gutterBottom
@@ -123,7 +121,7 @@ export default function Footer(props) {
             >
               Lease
             </Typography>
-        
+
             <Typography
               variant="body2"
               gutterBottom
@@ -142,11 +140,8 @@ export default function Footer(props) {
             >
               Contact
             </Typography>
-        
-
           </Grid>
-          <Grid item lg={2}>
-          
+          <Grid item xs={4} sm={3} md={2} lg={2}>
             <Typography
               variant="subtitle1"
               gutterBottom
@@ -155,7 +150,7 @@ export default function Footer(props) {
             >
               Resources
             </Typography>
-         
+
             <Typography
               variant="body2"
               gutterBottom
@@ -165,7 +160,7 @@ export default function Footer(props) {
             >
               Tour
             </Typography>
-        
+
             <Typography
               variant="body2"
               gutterBottom
@@ -175,7 +170,7 @@ export default function Footer(props) {
             >
               About
             </Typography>
-         
+
             <Typography
               variant="body2"
               gutterBottom
@@ -185,86 +180,80 @@ export default function Footer(props) {
             >
               Contact
             </Typography>
-        
+          </Grid>
+          <Grid item xs={4} sm={5} md={3} lg={3}>
+            <Box
+              style={{
+                display: "flex",
+                alignItems: "left",
+                paddingBottom: 1,
+              }}
+            >
+              <Typography
+                variant="subtitle1"
+                gutterBottom
+                align="left"
+                className={classes.title}
+              >
+                Contact
+              </Typography>
+            </Box>
+            <Box
+              className={classes.contact}
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <PhoneIcon className={classes.icon} color="textSecondary" />
+              <Typography
+                variant="body2"
+                gutterBottom
+                align="left"
+                className={classes.typography}
+                color="textSecondary"
+              >
+                281-332-1832
+              </Typography>
+            </Box>
+            <Box
+              className={classes.contact}
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <EmailIcon className={classes.icon} color="textSecondary" />
+              <Typography
+                variant="body2"
+                gutterBottom
+                align="left"
+                className={classes.typography}
+                color="textSecondary"
+              >
+                summit-of-friendswood@gmail.com
+              </Typography>
+            </Box>
+            <Box
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <LocationOnIcon className={classes.icon} color="textSecondary" />
+              <Typography
+                variant="body2"
+                gutterBottom
+                align="left"
+                className={classes.typography}
+                color="textSecondary"
+              >
+                3526 E FM 528 Friendswood TX, 77546
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
 
-          </Grid>
-          <Grid item lg={3}>
-          <Box
-          
-            style={{
-              display: "flex",
-              alignItems: "left",
-              paddingBottom: 1
-            }}
-          >
-            <Typography
-              variant="subtitle1"
-              gutterBottom
-              align="left"
-              className={classes.title}
-            >
-              Contact
-            </Typography>
-          </Box>
-          <Box
-          className={classes.contact}
-            style={{
-              display: "flex",
-              alignItems: "center",
-              
-            }}
-          >
-            <PhoneIcon className={classes.icon} color="textSecondary"/>
-            <Typography
-              variant="body2"
-              gutterBottom
-              align="left"
-              className={classes.typography}
-              color="textSecondary"
-            >
-              281-332-1832
-            </Typography>
-          </Box>
-          <Box
-          className={classes.contact}
-            style={{
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <EmailIcon className={classes.icon} color="textSecondary"/>
-            <Typography
-              variant="body2"
-              gutterBottom
-              align="left"
-              className={classes.typography}
-              color="textSecondary"
-            >
-              summit-of-friendswood@gmail.com
-            </Typography>
-          </Box>
-          <Box
-            style={{
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <LocationOnIcon className={classes.icon} color="textSecondary"/>
-            <Typography
-              variant="body2"
-              gutterBottom
-              align="left"
-              className={classes.typography}
-              color="textSecondary"
-            >
-              3526 E FM 528 Friendswood TX, 77546
-            </Typography>
-          </Box>
-
-          </Grid>
-          </Grid>
-        
-                  
         <Typography
           variant="subtitle1"
           align="center"

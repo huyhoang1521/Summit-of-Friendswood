@@ -53,8 +53,7 @@ export default function BackgroundImage(props) {
   return (
     <Paper
       className={classes.root}
-      style={{ backgroundImage: `url(${post.image})`, aspectRatio: 3/2 }
-    }
+      style={{ backgroundImage: `url(${post.image})`, aspectRatio: 3 / 2 }}
     >
       {/* Increase the priority of the hero background image */}
       {

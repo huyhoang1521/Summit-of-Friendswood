@@ -6,18 +6,19 @@ import BackgroundImage from "../components/BackgroundImage";
 import Footer from "../components/Footer";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import EmojiTransportationIcon from '@material-ui/icons/EmojiTransportation';
-import AnnouncementIcon from '@material-ui/icons/Announcement';
-import Divider from '@material-ui/core/Divider';
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
-import ApartmentIcon from '@material-ui/icons/Apartment';
-import BuildIcon from '@material-ui/icons/Build';
-import ContactPhoneIcon from '@material-ui/icons/ContactPhone';
-import FastfoodIcon from '@material-ui/icons/Fastfood';
-import VideocamIcon from '@material-ui/icons/Videocam';
-import GroupIcon from '@material-ui/icons/Group';
-import MailIcon from '@material-ui/icons/Mail';
-import StoreIcon from '@material-ui/icons/Store';
+import EmojiTransportationIcon from "@material-ui/icons/EmojiTransportation";
+import AnnouncementIcon from "@material-ui/icons/Announcement";
+import Divider from "@material-ui/core/Divider";
+import AccessAlarmIcon from "@material-ui/icons/AccessAlarm";
+import ApartmentIcon from "@material-ui/icons/Apartment";
+import BuildIcon from "@material-ui/icons/Build";
+import ContactPhoneIcon from "@material-ui/icons/ContactPhone";
+import FastfoodIcon from "@material-ui/icons/Fastfood";
+import VideocamIcon from "@material-ui/icons/Videocam";
+import GroupIcon from "@material-ui/icons/Group";
+import MailIcon from "@material-ui/icons/Mail";
+import StoreIcon from "@material-ui/icons/Store";
+import Hidden from "@material-ui/core/Hidden";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,32 +34,44 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
   },
   typographySub: {
-    marginBottom: theme.spacing(3),
+    marginBottom: theme.spacing(7),
     fontFamily: `"Work Sans", "Open Sans", "Arial", sans-serif`,
-    paddingLeft: 300,
-    paddingRight: 300,
   },
   backgroundImage: {
-    marginBottom: theme.spacing(15),
+    [theme.breakpoints.between("sm", "md")]: {
+      marginBottom: theme.spacing(8),
+    },
+    [theme.breakpoints.up("lg")]: {
+      marginBottom: theme.spacing(15),
+    },
   },
   grid: {
     marginBottom: theme.spacing(15),
   },
   gridItems: {
-    padding: '40px'
+    padding: "40px",
   },
   gridItemsFeature: {
-    paddingLeft: 60,
-    paddingRight: 60,
-    paddingTop: 60,
+    [theme.breakpoints.only("xs")]: {
+      margin: theme.spacing(3),
+    },
+    [theme.breakpoints.up("sm")]: {
+      paddingLeft: 60,
+      paddingRight: 60,
+    },
   },
   gridItemsFeatureBottom: {
-    padding: 60
+    [theme.breakpoints.only("xs")]: {
+      margin: theme.spacing(3),
+    },
+    [theme.breakpoints.up("sm")]: {
+      padding: 60,
+    },
   },
   features: {
-    maxWidth: '75%',
-    align: 'center',
-    justify: 'center'
+    maxWidth: "75%",
+    align: "center",
+    justify: "center",
   },
   icon: {
     marginBottom: theme.spacing(2),
@@ -66,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
   iconFeature: {
     width: 55,
     height: 55,
-  }
+  },
 }));
 
 const imageText = {
@@ -93,59 +106,119 @@ export default function Home() {
         alignItems="center"
         justify="center"
         style={{
-    overflow: 'hidden'
-  }}
+          overflow: "hidden",
+        }}
       >
-        <Grid item lg={12}>
+        <Grid item>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm container className={classes.grid}>
-              <Grid item xs={3} className={classes.gridItems} container direction="column" spacing={2} align="center">
+            <Grid item container className={classes.grid}>
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                m={6}
+                lg={3}
+                xl={3}
+                className={classes.gridItems}
+                container
+                direction="column"
+                spacing={2}
+                align="center"
+              >
                 <Grid item>
-                  <Typography gutterBottom variant="subtitle1" color="textSecondary">
-                    Introduction
-                      </Typography>
                   <Typography
-                    variant="h5"
                     gutterBottom
+                    variant="subtitle1"
+                    color="textSecondary"
                   >
+                    Introduction
+                  </Typography>
+                  <Typography variant="h5" gutterBottom>
                     CLEAN DESIGN
-                      </Typography>
+                  </Typography>
                   <Typography variant="body2" color="textSecondary">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      </Typography>
-
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </Typography>
                 </Grid>
-                <Divider orientation="vertical" flexItem />
+                <Hidden only="xs">
+                  <Divider orientation="vertical" flexItem />
+                </Hidden>
               </Grid>
-              <Divider orientation="vertical" flexItem />
-              <Grid item xs={3} className={classes.gridItems} container direction="column" spacing={2} align="center">
+              <Hidden only="xs">
+                <Divider orientation="vertical" flexItem />
+              </Hidden>
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                m={6}
+                lg={3}
+                xl={3}
+                className={classes.gridItems}
+                container
+                direction="column"
+                spacing={2}
+                align="center"
+              >
                 <Grid item>
                   <ApartmentIcon className={classes.icon} fontSize="large" />
                   <Typography variant="body2" color="textSecondary">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      </Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </Typography>
                 </Grid>
               </Grid>
-              <Divider orientation="vertical" flexItem />
-              <Grid item xs={3} className={classes.gridItems} container direction="column" spacing={2} align="center">
+              <Hidden mdDown>
+                <Divider orientation="vertical" flexItem />
+              </Hidden>
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                m={6}
+                lg={3}
+                xl={3}
+                className={classes.gridItems}
+                container
+                direction="column"
+                spacing={2}
+                align="center"
+              >
                 <Grid item>
                   <BuildIcon className={classes.icon} fontSize="large" />
                   <Typography variant="body2" color="textSecondary">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      </Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </Typography>
                 </Grid>
               </Grid>
-              <Divider orientation="vertical" flexItem />
-              <Grid item xs={3} className={classes.gridItems} container direction="column" spacing={2} align="center">
+              <Hidden only="xs">
+                <Divider orientation="vertical" flexItem />
+              </Hidden>
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                m={6}
+                lg={3}
+                xl={3}
+                className={classes.gridItems}
+                container
+                direction="column"
+                spacing={2}
+                align="center"
+              >
                 <Grid item>
                   <AccessAlarmIcon className={classes.icon} fontSize="large" />
                   <Typography variant="body2" color="textSecondary">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                      </Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </Typography>
                 </Grid>
               </Grid>
             </Grid>
@@ -155,31 +228,35 @@ export default function Home() {
           container
           className={classes.features}
           spacing={0}
+          align="center"
           alignItems="center"
           justify="center"
         >
           <Grid item xs={12} sm={12}>
-            <Typography
-              variant="h5"
-              align="center"
-              className={classes.typographyFeatures}
-            >
+            <Typography variant="h5" className={classes.typographyFeatures}>
               Lorem ipsum dolor sit amet
-          </Typography>
-          <Typography
-              variant="body2"
-              color="textSecondary"
-              gutterBottom
-              align="center"
-              className={classes.typographySub}
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </Typography>
+            </Typography>
+            <Grid item xs={12} sm={6}>
+              <Typography
+                variant="body2"
+                color="textSecondary"
+                gutterBottom
+                align="center"
+                className={classes.typographySub}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={3} className={classes.gridItemsFeature} align="center">
-            <MailIcon className={classes.iconFeature}>
-            </MailIcon>
+          <Grid
+            item
+            xs={12}
+            sm={3}
+            className={classes.gridItemsFeature}
+            align="center"
+          >
+            <MailIcon className={classes.iconFeature}></MailIcon>
             <Typography
               variant="body2"
               gutterBottom
@@ -187,9 +264,15 @@ export default function Home() {
               className={classes.typography}
             >
               Mailboxes
-          </Typography>
+            </Typography>
           </Grid>
-          <Grid item xs={12} sm={3} className={classes.gridItemsFeature} align="center">
+          <Grid
+            item
+            xs={12}
+            sm={3}
+            className={classes.gridItemsFeature}
+            align="center"
+          >
             <StoreIcon className={classes.iconFeature}></StoreIcon>
             <Typography
               variant="body2"
@@ -198,11 +281,18 @@ export default function Home() {
               className={classes.typography}
             >
               Store
-          </Typography>
+            </Typography>
           </Grid>
-          <Grid item xs={12} sm={3} className={classes.gridItemsFeature} align="center">
-            <EmojiTransportationIcon className={classes.iconFeature}>
-            </EmojiTransportationIcon>
+          <Grid
+            item
+            xs={12}
+            sm={3}
+            className={classes.gridItemsFeature}
+            align="center"
+          >
+            <EmojiTransportationIcon
+              className={classes.iconFeature}
+            ></EmojiTransportationIcon>
             <Typography
               variant="body2"
               gutterBottom
@@ -210,12 +300,18 @@ export default function Home() {
               className={classes.typography}
             >
               Convenient Location on FM 528
-          </Typography>
-
+            </Typography>
           </Grid>
-          <Grid item xs={12} sm={3} className={classes.gridItemsFeature} align="center">
-            <AnnouncementIcon className={classes.iconFeature}>
-            </AnnouncementIcon>
+          <Grid
+            item
+            xs={12}
+            sm={3}
+            className={classes.gridItemsFeature}
+            align="center"
+          >
+            <AnnouncementIcon
+              className={classes.iconFeature}
+            ></AnnouncementIcon>
             <Typography
               variant="body2"
               gutterBottom
@@ -223,11 +319,16 @@ export default function Home() {
               className={classes.typography}
             >
               Reliable Building Maintenance
-          </Typography>
+            </Typography>
           </Grid>
-          <Grid item xs={12} sm={3} className={classes.gridItemsFeatureBottom} align="center">
-            <GroupIcon className={classes.iconFeature}>
-            </GroupIcon>
+          <Grid
+            item
+            xs={12}
+            sm={3}
+            className={classes.gridItemsFeatureBottom}
+            align="center"
+          >
+            <GroupIcon className={classes.iconFeature}></GroupIcon>
             <Typography
               variant="body2"
               gutterBottom
@@ -235,11 +336,16 @@ export default function Home() {
               className={classes.typography}
             >
               Groups
-          </Typography>
+            </Typography>
           </Grid>
-          <Grid item xs={12} sm={3} className={classes.gridItemsFeatureBottom} align="center">
-            <VideocamIcon className={classes.iconFeature}>
-            </VideocamIcon>
+          <Grid
+            item
+            xs={12}
+            sm={3}
+            className={classes.gridItemsFeatureBottom}
+            align="center"
+          >
+            <VideocamIcon className={classes.iconFeature}></VideocamIcon>
             <Typography
               variant="body2"
               gutterBottom
@@ -247,11 +353,16 @@ export default function Home() {
               className={classes.typography}
             >
               24/7 Video Surveillance
-          </Typography>
+            </Typography>
           </Grid>
-          <Grid item xs={12} sm={3} className={classes.gridItemsFeatureBottom} align="center">
-            <FastfoodIcon className={classes.iconFeature}>
-            </FastfoodIcon>
+          <Grid
+            item
+            xs={12}
+            sm={3}
+            className={classes.gridItemsFeatureBottom}
+            align="center"
+          >
+            <FastfoodIcon className={classes.iconFeature}></FastfoodIcon>
             <Typography
               variant="body2"
               gutterBottom
@@ -259,11 +370,18 @@ export default function Home() {
               className={classes.typography}
             >
               Food Options Nearby
-          </Typography>
+            </Typography>
           </Grid>
-          <Grid item xs={12} sm={3} className={classes.gridItemsFeatureBottom} align="center">
-            <ContactPhoneIcon className={classes.iconFeature}>
-            </ContactPhoneIcon>
+          <Grid
+            item
+            xs={12}
+            sm={3}
+            className={classes.gridItemsFeatureBottom}
+            align="center"
+          >
+            <ContactPhoneIcon
+              className={classes.iconFeature}
+            ></ContactPhoneIcon>
             <Typography
               variant="body2"
               gutterBottom
@@ -271,7 +389,7 @@ export default function Home() {
               className={classes.typography}
             >
               Phone
-          </Typography>
+            </Typography>
           </Grid>
         </Grid>
       </Grid>
