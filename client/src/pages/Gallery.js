@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
-import Footer from "../components/Footer";
 
 // TODO - add fade animation when loading images
 const useStyles = makeStyles((theme) => ({
@@ -78,7 +77,6 @@ export default function Gallery() {
           </GridListTile>
         ))}
       </GridList>
-      <Footer />
     </div>
   );
 }

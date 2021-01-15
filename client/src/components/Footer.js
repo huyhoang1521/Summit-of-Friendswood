@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
 
   icon: {
     marginRight: "5px",
+    color: theme.palette.grey[500],
     width: 16,
     height: 16,
   },
@@ -205,7 +206,7 @@ export default function Footer(props) {
                 alignItems: "center",
               }}
             >
-              <PhoneIcon className={classes.icon} color="textSecondary" />
+              <PhoneIcon className={classes.icon} color="secondary" />
               <Typography
                 variant="body2"
                 gutterBottom
@@ -223,7 +224,7 @@ export default function Footer(props) {
                 alignItems: "center",
               }}
             >
-              <EmailIcon className={classes.icon} color="textSecondary" />
+              <EmailIcon className={classes.icon} color="secondary" />
               <Typography
                 variant="body2"
                 gutterBottom
@@ -240,7 +241,7 @@ export default function Footer(props) {
                 alignItems: "center",
               }}
             >
-              <LocationOnIcon className={classes.icon} color="textSecondary" />
+              <LocationOnIcon className={classes.icon} color="secondary" />
               <Typography
                 variant="body2"
                 gutterBottom

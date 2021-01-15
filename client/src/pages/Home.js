@@ -3,7 +3,6 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import BackgroundImage from "../components/BackgroundImage";
-import Footer from "../components/Footer";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import EmojiTransportationIcon from "@material-ui/icons/EmojiTransportation";
@@ -393,7 +392,6 @@ export default function Home() {
           </Grid>
         </Grid>
       </Grid>
-      <Footer />
     </React.Fragment>
   );
 }
