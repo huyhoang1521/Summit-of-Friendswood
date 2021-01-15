@@ -59,7 +59,9 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     maxWidth: "100%",
     maxHeight: "100%",
-    marginRight: "40px",
+    [theme.breakpoints.up("sm")]: {
+      marginRight: "40px",
+    },
   },
   closeButton: {
     position: "absolute",
