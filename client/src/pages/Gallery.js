@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
+import withWidth, { isWidthDown, isWidthUp } from "@material-ui/core/withWidth";
 
 // TODO - add fade animation when loading images
 const useStyles = makeStyles((theme) => ({
@@ -14,8 +15,8 @@ const useStyles = makeStyles((theme) => ({
   },
   gridList: {
     height: "auto",
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: "left",
+    alignItems: "left",
   },
 }));
 
@@ -58,25 +59,38 @@ const tileData = [
   },
 ];
 
-export default function Gallery() {
+const Gallery = (props) => {
   const classes = useStyles();
+
+  function getCols(screenWidth, cols) {
+    if (isWidthUp("md", screenWidth)) {
+      return cols;
+    }
+
+    if (isWidthUp("sm", screenWidth)) {
+      return 3;
+    }
+
+    return 6;
+  }
 
   return (
     <div className={classes.root}>
       <GridList
         cellHeight={500}
-        maxWidth="md"
         spacing={15}
         className={classes.gridList}
         cols={6}
         style={{ overflow: "hidden" }}
       >
         {tileData.map((tile) => (
-          <GridListTile key={tile.img} cols={tile.cols || 1}>
+          <GridListTile key={tile.img} cols={getCols(props.width, tile.cols)}>
             <img src={tile.img} alt={tile.title} />
           </GridListTile>
         ))}
       </GridList>
     </div>
   );
-}
+};
+
+export default withWidth()(Gallery);
