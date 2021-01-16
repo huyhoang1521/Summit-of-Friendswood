@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   gridList: {
     height: "auto",
-    justifyContent: "left",
+    justifyContent: "center",
     alignItems: "left",
   },
 }));
