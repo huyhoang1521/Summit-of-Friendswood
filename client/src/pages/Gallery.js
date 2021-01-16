@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
-import withWidth, { isWidthDown, isWidthUp } from "@material-ui/core/withWidth";
+import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
 
 // TODO - add fade animation when loading images
 const useStyles = makeStyles((theme) => ({

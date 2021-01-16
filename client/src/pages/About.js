@@ -12,6 +12,12 @@ const useStyles = makeStyles((theme) => ({
   },
   grid: {
     width: "65%",
+    [theme.breakpoints.down("sm")]: {
+      width: "85%",
+    },
+    [theme.breakpoints.only("md")]: {
+      width: "75%",
+    },
     verticalAlign: "top",
   },
   verticalPic: {
@@ -60,8 +66,11 @@ const useStyles = makeStyles((theme) => ({
   },
   halfTypography: {
     lineHeight: 2,
-    paddingLeft: "40px",
-    paddingRight: "40px",
+    [theme.breakpoints.up("md")]: {
+      paddingLeft: "40px",
+      paddingRight: "40px",
+    },
+
     //paddingLeft: "10px"
   },
 }));
@@ -110,7 +119,14 @@ export default function About() {
             <Box fontWeight="fontWeightBold">Lorem ipsum dolor sit amet</Box>
           </Typography>
         </Grid>
-        <Grid item xs={5} sm={5} gutterBottom style={{ verticalAlign: "top" }}>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={5}
+          gutterBottom
+          style={{ verticalAlign: "top" }}
+        >
           <img
             className={classes.verticalPic}
             src={"/assets/office_building.jpg"}
@@ -120,9 +136,11 @@ export default function About() {
 
         <Grid
           item
-          xs={7}
-          sm={7}
+          xs={12}
+          sm={12}
+          md={7}
           gutterBottom
+          align="left"
           className={classes.halfTypography}
         >
           <Typography

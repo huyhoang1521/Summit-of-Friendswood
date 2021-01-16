@@ -29,10 +29,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "24px",
   },
   image: {
-    width: 200,
-    height: 200,
-  },
-  imageTest: {
     maxWidth: "100%",
     maxHeight: "100%",
   },
@@ -59,9 +55,15 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     maxWidth: "100%",
     maxHeight: "100%",
-    [theme.breakpoints.up("sm")]: {
-      marginRight: "40px",
+    [theme.breakpoints.only("sm")]: {
+      marginRight: "50px",
     },
+    [theme.breakpoints.up("md")]: {
+      marginRight: "30px",
+    },
+  },
+  gridItem: {
+    padding: theme.spacing(2),
   },
   closeButton: {
     position: "absolute",
@@ -87,10 +89,10 @@ export default function Lease() {
         justify="center"
       >
         <Grid item lg={12}>
-          <Paper className={classes.paper} spacing={2}>
-            <Grid container spacing={2}>
+          <Paper className={classes.paper} spacing={4}>
+            <Grid container>
               <Grid item lg={2} md={4} sm={6} xs={12}>
-                <ButtonBase className={classes.imageTest}>
+                <ButtonBase className={classes.image}>
                   <img
                     className={classes.img}
                     alt="complex"
@@ -107,7 +109,9 @@ export default function Lease() {
                   xs={4}
                   container
                   direction="column"
+                  align="center"
                   spacing={2}
+                  className={classes.gridItem}
                 >
                   <Typography gutterBottom variant="subtitle1">
                     Unit
@@ -129,11 +133,12 @@ export default function Lease() {
                   lg={3}
                   md={3}
                   sm={6}
-                  xs={4}
+                  xs={5}
                   container
                   direction="column"
-                  align="left"
+                  align="center"
                   spacing={2}
+                  className={classes.gridItem}
                 >
                   <Typography gutterBottom variant="subtitle1">
                     Monthly
@@ -151,11 +156,12 @@ export default function Lease() {
                   container
                   direction="column"
                   spacing={2}
-                  align="left"
-                  lg={4}
-                  md={4}
+                  align="center"
+                  lg={3}
+                  md={3}
                   sm={6}
                   xs={4}
+                  className={classes.gridItem}
                 >
                   <Typography gutterBottom variant="subtitle1">
                     Floor
@@ -168,7 +174,15 @@ export default function Lease() {
                     1st Floor
                   </Typography>
                 </Grid>
-                <Grid item lg={2} md={2} sm={6} xs={12} align="center">
+                <Grid
+                  item
+                  lg={3}
+                  md={3}
+                  sm={6}
+                  xs={12}
+                  align="center"
+                  className={classes.gridItem}
+                >
                   <Button
                     size="large"
                     square="true"
@@ -185,11 +199,12 @@ export default function Lease() {
             </Grid>
           </Paper>
         </Grid>
+
         <Grid item lg={12}>
-          <Paper className={classes.paper} spacing={2}>
-            <Grid container spacing={2}>
+          <Paper className={classes.paper} spacing={4}>
+            <Grid container>
               <Grid item lg={2} md={4} sm={6} xs={12}>
-                <ButtonBase className={classes.imageTest}>
+                <ButtonBase className={classes.image}>
                   <img
                     className={classes.img}
                     alt="complex"
@@ -206,7 +221,9 @@ export default function Lease() {
                   xs={4}
                   container
                   direction="column"
+                  align="center"
                   spacing={2}
+                  className={classes.gridItem}
                 >
                   <Typography gutterBottom variant="subtitle1">
                     Unit
@@ -216,7 +233,7 @@ export default function Lease() {
                     variant="body2"
                     gutterBottom
                   >
-                    #2000
+                    #1000
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
                     764 Sq. Ft.
@@ -228,11 +245,12 @@ export default function Lease() {
                   lg={3}
                   md={3}
                   sm={6}
-                  xs={4}
+                  xs={5}
                   container
                   direction="column"
-                  align="left"
+                  align="center"
                   spacing={2}
+                  className={classes.gridItem}
                 >
                   <Typography gutterBottom variant="subtitle1">
                     Monthly
@@ -250,11 +268,12 @@ export default function Lease() {
                   container
                   direction="column"
                   spacing={2}
-                  align="left"
-                  lg={4}
-                  md={4}
+                  align="center"
+                  lg={3}
+                  md={3}
                   sm={6}
                   xs={4}
+                  className={classes.gridItem}
                 >
                   <Typography gutterBottom variant="subtitle1">
                     Floor
@@ -267,7 +286,15 @@ export default function Lease() {
                     1st Floor
                   </Typography>
                 </Grid>
-                <Grid item lg={2} md={2} sm={6} xs={12} align="center">
+                <Grid
+                  item
+                  lg={3}
+                  md={3}
+                  sm={6}
+                  xs={12}
+                  align="center"
+                  className={classes.gridItem}
+                >
                   <Button
                     size="large"
                     square="true"
@@ -284,11 +311,12 @@ export default function Lease() {
             </Grid>
           </Paper>
         </Grid>
+
         <Grid item lg={12}>
-          <Paper className={classes.paper} spacing={2}>
-            <Grid container spacing={2}>
+          <Paper className={classes.paper} spacing={4}>
+            <Grid container>
               <Grid item lg={2} md={4} sm={6} xs={12}>
-                <ButtonBase className={classes.imageTest}>
+                <ButtonBase className={classes.image}>
                   <img
                     className={classes.img}
                     alt="complex"
@@ -305,7 +333,9 @@ export default function Lease() {
                   xs={4}
                   container
                   direction="column"
+                  align="center"
                   spacing={2}
+                  className={classes.gridItem}
                 >
                   <Typography gutterBottom variant="subtitle1">
                     Unit
@@ -315,7 +345,7 @@ export default function Lease() {
                     variant="body2"
                     gutterBottom
                   >
-                    #3000
+                    #1000
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
                     764 Sq. Ft.
@@ -327,11 +357,12 @@ export default function Lease() {
                   lg={3}
                   md={3}
                   sm={6}
-                  xs={4}
+                  xs={5}
                   container
                   direction="column"
-                  align="left"
+                  align="center"
                   spacing={2}
+                  className={classes.gridItem}
                 >
                   <Typography gutterBottom variant="subtitle1">
                     Monthly
@@ -349,11 +380,12 @@ export default function Lease() {
                   container
                   direction="column"
                   spacing={2}
-                  align="left"
-                  lg={4}
-                  md={4}
+                  align="center"
+                  lg={3}
+                  md={3}
                   sm={6}
                   xs={4}
+                  className={classes.gridItem}
                 >
                   <Typography gutterBottom variant="subtitle1">
                     Floor
@@ -366,7 +398,15 @@ export default function Lease() {
                     1st Floor
                   </Typography>
                 </Grid>
-                <Grid item lg={2} md={2} sm={6} xs={12} align="center">
+                <Grid
+                  item
+                  lg={3}
+                  md={3}
+                  sm={6}
+                  xs={12}
+                  align="center"
+                  className={classes.gridItem}
+                >
                   <Button
                     size="large"
                     square="true"
