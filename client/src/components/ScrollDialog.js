@@ -22,7 +22,12 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     maxWidth: "100%",
     maxHeight: "100%",
-    padding: theme.spacing(4),
+    [theme.breakpoints.only("sm")]: {
+      padding: theme.spacing(2),
+    },
+    [theme.breakpoints.up("md")]: {
+      padding: theme.spacing(4),
+    },
   },
   gridItem: {
     //height: "20%",
@@ -74,7 +79,7 @@ export default function ScrollDialog(props) {
 
         <DialogContent dividers>
           <Grid container>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={12} md={6}>
               <img
                 className={classes.img}
                 alt="complex"
@@ -83,7 +88,9 @@ export default function ScrollDialog(props) {
             </Grid>
             <Grid
               item
-              xs={6}
+              xs={12}
+              sm={12}
+              md={6}
               className={classes.grid}
               spacing={5}
               container

@@ -3,21 +3,17 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
+import Divider from "@material-ui/core/Divider";
+
+import BackgroundImage from "../components/BackgroundImage";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    marginTop: theme.spacing(8),
+    // marginTop: theme.spacing(8),
     justifyContent: "center",
     display: "flex",
   },
   grid: {
-    width: "65%",
-    [theme.breakpoints.down("sm")]: {
-      width: "85%",
-    },
-    [theme.breakpoints.only("md")]: {
-      width: "75%",
-    },
     verticalAlign: "top",
   },
   verticalPic: {
@@ -25,37 +21,12 @@ const useStyles = makeStyles((theme) => ({
     elevation: 0,
     borderRadius: 0,
     marginTop: "8px",
-    //marginBottom: "20px",
-    [theme.breakpoints.up("md")]: {
-      height: "30vw",
-    },
-    [theme.breakpoints.only("sm")]: {
-      height: "40vw",
-    },
-    [theme.breakpoints.only("xs")]: {
-      height: "50vw",
-    },
+    marginBottom: theme.spacing(7),
     width: "100%",
+    aspectRatio: 1,
   },
-  pic: {
-    position: "relative",
-    elevation: 0,
-    borderRadius: 0,
-    marginBottom: "24px",
-    [theme.breakpoints.up("md")]: {
-      height: "40vw",
-    },
-    [theme.breakpoints.only("sm")]: {
-      height: "50vw",
-    },
-    [theme.breakpoints.only("xs")]: {
-      height: "60vw",
-    },
-    width: "100%",
-  },
-  firstTypography: {
-    lineHeight: 2,
-    marginBottom: "60px",
+  divider: {
+    marginBottom: theme.spacing(7),
   },
   typography: {
     lineHeight: 2,
@@ -64,16 +35,32 @@ const useStyles = makeStyles((theme) => ({
   title: {
     marginBottom: "30px",
   },
+  gridItem: {
+    [theme.breakpoints.only("xs")]: {
+      paddingLeft: "24px",
+      paddingRight: "24px",
+    },
+  },
   halfTypography: {
     lineHeight: 2,
+    marginBottom: theme.spacing(7),
     [theme.breakpoints.up("md")]: {
       paddingLeft: "40px",
       paddingRight: "40px",
     },
-
-    //paddingLeft: "10px"
+    [theme.breakpoints.only("xs")]: {
+      paddingLeft: "24px",
+      paddingRight: "24px",
+    },
+  },
+  BackgroundImage: {
+    marginBottom: theme.spacing(4),
   },
 }));
+
+const image = {
+  image: "https://source.unsplash.com/random",
+};
 
 export default function About() {
   const classes = useStyles();
@@ -87,64 +74,23 @@ export default function About() {
         spacing={0}
         justify="center"
       >
-        <Grid item xs={12} sm={12} gutterBottom>
-          <Typography variant="h5" align="left" className={classes.title}>
-            <Box fontWeight="fontWeightBold">Lorem ipsum dolor sit amet</Box>
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={12} gutterBottom>
-          <Typography
-            variant="body1"
-            align="left"
-            className={classes.firstTypography}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est.
-          </Typography>
-        </Grid>
-        <Grid item xs={12} sm={12} gutterBottom>
-          <Typography variant="h5" align="left" className={classes.title}>
-            <Box fontWeight="fontWeightBold">Lorem ipsum dolor sit amet</Box>
-          </Typography>
-        </Grid>
         <Grid
           item
           xs={12}
           sm={12}
-          md={5}
           gutterBottom
-          style={{ verticalAlign: "top" }}
+          className={classes.BackgroundImage}
         >
-          <img
-            className={classes.verticalPic}
-            src={"/assets/office_building.jpg"}
-            alt={"office_building"}
-          />
+          <BackgroundImage post={image} />
         </Grid>
-
-        <Grid
-          item
-          xs={12}
-          sm={12}
-          md={7}
-          gutterBottom
-          align="left"
-          className={classes.halfTypography}
-        >
+        <Grid item xs={12} sm={8} gutterBottom className={classes.gridItem}>
+          <Typography variant="h6" align="left" className={classes.title}>
+            <Box fontWeight="fontWeightBold">Lorem ipsum dolor sit amet</Box>
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={8} gutterBottom className={classes.gridItem}>
           <Typography
-            variant="body1"
+            variant="body2"
             align="left"
             className={classes.typography}
           >
@@ -154,29 +100,72 @@ export default function About() {
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.
+            culpa qui officia deserunt mollit anim id est laborum.
           </Typography>
-
-          <Typography
-            variant="body1"
-            align="left"
-            className={classes.typography}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco.
-          </Typography>
+          <Divider className={classes.divider} />
         </Grid>
-        <Grid item xs={12} sm={12} gutterBottom>
-          <Typography variant="h5" align="left" className={classes.title}>
+        <Grid item xs={12} sm={8} gutterBottom className={classes.gridItem}>
+          <Typography variant="h6" align="left" className={classes.title}>
             <Box fontWeight="fontWeightBold">Lorem ipsum dolor sit amet</Box>
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={12} gutterBottom>
+        <Grid container xs={12} sm={8} gutterBottom>
+          <Grid item xs={12} md={6} gutterBottom>
+            <img
+              className={classes.verticalPic}
+              style={{
+                aspectRatio: 1 / 1,
+              }}
+              src={"/assets/photo-building.jpg"}
+              alt={"office_building"}
+            />
+          </Grid>
+          <Grid
+            item
+            md={6}
+            gutterBottom
+            align="left"
+            className={classes.halfTypography}
+          >
+            <Typography
+              variant="body2"
+              align="left"
+              className={classes.typography}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Typography
+              variant="body2"
+              align="left"
+              className={classes.typography}
+            >
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={12}>
+            <Divider className={classes.divider} />
+          </Grid>
+        </Grid>
+
+        <Grid item xs={12} sm={8} gutterBottom className={classes.gridItem}>
+          <Typography variant="h6" align="left" className={classes.title}>
+            <Box fontWeight="fontWeightBold">Lorem ipsum dolor sit amet</Box>
+          </Typography>
+        </Grid>
+        <Grid item xs={12} sm={8} className={classes.gridItem}>
           <Typography
-            variant="body1"
+            variant="body2"
             align="left"
             className={classes.typography}
           >
@@ -200,19 +189,17 @@ export default function About() {
             consequat.
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={12} gutterBottom>
-          <img
-            className={classes.pic}
-            src={"/assets/3d.jpg"}
-            alt={"office_building"}
-          />
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          gutterBottom
+          className={classes.BackgroundImage}
+        >
+          <BackgroundImage post={image} />
         </Grid>
-        <Grid item xs={12} sm={12} gutterBottom>
-          <img
-            className={classes.pic}
-            src={"/assets/3d-side.jpg"}
-            alt={"office_building"}
-          />
+        <Grid item xs={12} sm={12}>
+          <BackgroundImage post={image} />
         </Grid>
       </Grid>
     </div>
