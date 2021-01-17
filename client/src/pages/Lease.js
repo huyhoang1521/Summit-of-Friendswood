@@ -80,7 +80,6 @@ export default function Lease() {
   return (
     <Container maxWidth="lg" className={classes.root}>
       <ScrollDialog open={openPopup} setOpen={setOpenPopup}></ScrollDialog>
-
       <Grid
         className={classes.contain}
         container
@@ -127,7 +126,6 @@ export default function Lease() {
                     764 Sq. Ft.
                   </Typography>
                 </Grid>
-
                 <Grid
                   item
                   lg={3}
@@ -199,7 +197,6 @@ export default function Lease() {
             </Grid>
           </Paper>
         </Grid>
-
         <Grid item lg={12}>
           <Paper className={classes.paper} spacing={4}>
             <Grid container>
@@ -239,7 +236,6 @@ export default function Lease() {
                     764 Sq. Ft.
                   </Typography>
                 </Grid>
-
                 <Grid
                   item
                   lg={3}
@@ -311,7 +307,6 @@ export default function Lease() {
             </Grid>
           </Paper>
         </Grid>
-
         <Grid item lg={12}>
           <Paper className={classes.paper} spacing={4}>
             <Grid container>

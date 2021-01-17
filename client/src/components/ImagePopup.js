@@ -27,23 +27,16 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function ImagePopup() {
+export default function ImagePopup(props) {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+  const { open, setOpen } = props;
 
   const handleClose = () => {
     setOpen(false);
   };
 
   return (
-    <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open full-screen dialog
-      </Button>
+    <React.Fragment>
       <Dialog
         fullScreen
         open={open}
@@ -81,6 +74,6 @@ export default function ImagePopup() {
           </ListItem>
         </List>
       </Dialog>
-    </div>
+    </React.Fragment>
   );
 }
