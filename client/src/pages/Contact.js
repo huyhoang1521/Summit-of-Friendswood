@@ -26,7 +26,7 @@ export default function Contact() {
   return (
     <div className={classes.root}>
       <Grid container width="75%" alignItems="center" justify="center">
-        <Grid item xs={12} md={9}>
+        <Grid item xs={9}>
           <Typography
             variant="h5"
             gutterBottom
