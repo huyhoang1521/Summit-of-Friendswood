@@ -1,35 +1,73 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
+import PropTypes from "prop-types";
 import Dialog from "@material-ui/core/Dialog";
-import ListItemText from "@material-ui/core/ListItemText";
-import ListItem from "@material-ui/core/ListItem";
-import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
 import CloseIcon from "@material-ui/icons/Close";
-import Slide from "@material-ui/core/Slide";
+import Fade from "@material-ui/core/Fade";
+import { Container } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundColor: "transparent",
+  },
+
+  paper: {
+    backgroundColor: "transparent",
+    boxShadow: "none",
+    overflow: "hidden",
+  },
+  backDrop: {
+    background: "rgba(255,255,255,0.2)",
+  },
+  image: {
+    /*height: "100%",
+    width: "100%",
+    position: "center",
+    paddingLeft: theme.spacing(20),
+    paddingRight: theme.spacing(20),
+    paddingBottom: theme.spacing(20),
+    elevation: 0,
+    borderRadius: 0,
+    aspectRatio: 1,*/
+    //maxWidth: "500vh",
+    maxHeight: "80vh",
+    //minWidth: "100px",
+    //minHeight: "100px",
+    //height: "auto",
+    width: "100%",
+    objectFit: "cover",
+    position: "center",
+    align: "center",
+    paddingLeft: theme.spacing(10),
+    paddingRight: theme.spacing(10),
+  },
   appBar: {
     position: "relative",
+    backgroundColor: "transparent",
+    boxShadow: "none",
   },
   title: {
     marginLeft: theme.spacing(2),
     flex: 1,
   },
+  dialog: {
+    backgroundColor: "transparent",
+  },
+  button: {
+    color: "#FFFFFF",
+  },
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
+  return <Fade ref={ref} {...props} />;
 });
 
 export default function ImagePopup(props) {
   const classes = useStyles();
-  const { open, setOpen } = props;
+  const { open, setOpen, post } = props;
 
   const handleClose = () => {
     setOpen(false);
@@ -41,39 +79,38 @@ export default function ImagePopup(props) {
         fullScreen
         open={open}
         onClose={handleClose}
+        PaperProps={{
+          style: {
+            background: "rgba(40,40,40,.5)",
+            boxShadow: "none",
+          },
+        }}
         TransitionComponent={Transition}
       >
         <AppBar className={classes.appBar}>
           <Toolbar>
             <IconButton
+              className={classes.button}
               edge="start"
-              color="inherit"
               onClick={handleClose}
               aria-label="close"
             >
               <CloseIcon />
             </IconButton>
-            <Typography variant="h6" className={classes.title}>
-              Sound
-            </Typography>
-            <Button autoFocus color="inherit" onClick={handleClose}>
-              save
-            </Button>
           </Toolbar>
         </AppBar>
-        <List>
-          <ListItem button>
-            <ListItemText primary="Phone ringtone" secondary="Titania" />
-          </ListItem>
-          <Divider />
-          <ListItem button>
-            <ListItemText
-              primary="Default notification ringtone"
-              secondary="Tethys"
-            />
-          </ListItem>
-        </List>
+        <Container alignItems="center">
+          <img
+            className={classes.image}
+            src={post.image}
+            alt={post.imageText}
+          />
+        </Container>
       </Dialog>
     </React.Fragment>
   );
 }
+
+ImagePopup.propTypes = {
+  post: PropTypes.object,
+};

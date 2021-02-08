@@ -36,7 +36,7 @@ export default function Contact() {
             Connect with us:
           </Typography>
           <Typography variant="body1" align="left" className={classes.title}>
-            For tours or any questions:
+            Email us at:
           </Typography>
           <Typography
             variant="body1"
@@ -44,7 +44,7 @@ export default function Contact() {
             align="left"
             className={classes.typography}
           >
-            Email us at summit-of-friendswood@gmail.com
+            summit-of-friendswood@gmail.com
           </Typography>
           <Typography variant="body1" align="left" className={classes.title}>
             You can also reach us by phone:

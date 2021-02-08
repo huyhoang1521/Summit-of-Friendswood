@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
+import Box from "@material-ui/core/Box";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,6 +37,9 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     backgroundColor: "rgba(0,0,0,.3)",
   },
+  description: {
+    lineHeight: 1.5,
+  },
   content: {
     position: "relative",
     padding: theme.spacing(3),
@@ -65,7 +69,7 @@ export default function BackgroundImage(props) {
       }
       <div className={classes.overlay} />
       <Grid container>
-        <Grid item md={4}>
+        <Grid item md={5}>
           <div className={classes.content}>
             <Typography
               component="h1"
@@ -73,9 +77,16 @@ export default function BackgroundImage(props) {
               color="inherit"
               gutterBottom
             >
-              {post.title}
+              <Box fontWeight="fontWeightMedium" fontSize={60} display="inline">
+                {post.title}
+              </Box>
             </Typography>
-            <Typography variant="h5" color="inherit" paragraph>
+            <Typography
+              variant="h5"
+              color="inherit"
+              className={classes.description}
+              paragraph
+            >
               {post.description}
             </Typography>
           </div>

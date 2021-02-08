@@ -86,10 +86,10 @@ export default function Footer(props) {
               About
             </Typography>
             <Typography variant="body2" color="textSecondary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Summit of Friendswood is a profressional office building located
+              in Friendswood Texas. We provides leasing to small businesses.
+              With a busy location and many food options near by, it makes the
+              perfect option for you business.
             </Typography>
           </Grid>
 

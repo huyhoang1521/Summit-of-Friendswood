@@ -18,6 +18,7 @@ import GroupIcon from "@material-ui/icons/Group";
 import MailIcon from "@material-ui/icons/Mail";
 import StoreIcon from "@material-ui/icons/Store";
 import Hidden from "@material-ui/core/Hidden";
+import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -47,8 +48,59 @@ const useStyles = makeStyles((theme) => ({
   grid: {
     marginBottom: theme.spacing(15),
   },
+  squareTypography: {
+    lineHeight: 1.5,
+    marginBottom: theme.spacing(4),
+  },
+  gridSquare: {
+    marginBottom: theme.spacing(15),
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "100%",
+      padding: "20px",
+    },
+    [theme.breakpoints.up("md")]: {
+      maxWidth: "60%",
+      padding: "40px",
+    },
+  },
+  squareText: {
+    marginBottom: theme.spacing(15),
+
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: "100%",
+    },
+    [theme.breakpoints.up("md")]: {
+      maxWidth: "40%",
+    },
+
+    paddingLeft: "50px",
+    paddingRight: "50px",
+  },
+  box: {
+    [theme.breakpoints.only("xs")]: {
+      height: "48vh",
+    },
+    [theme.breakpoints.only("sm")]: {
+      height: "45vh",
+    },
+    [theme.breakpoints.up("md")]: {
+      height: "28vh",
+    },
+  },
   gridItems: {
     padding: "40px",
+  },
+  gridItemsSquare: {
+    [theme.breakpoints.up("md")]: {
+      padding: "20px",
+    },
+  },
+  squareAboutTypography: {
+    paddingTop: "20px",
+    paddingLeft: "20px",
+  },
+  squareAboutTypographySmall: {
+    paddingLeft: "20px",
   },
   gridItemsFeature: {
     [theme.breakpoints.only("xs")]: {
@@ -79,12 +131,16 @@ const useStyles = makeStyles((theme) => ({
     width: 55,
     height: 55,
   },
+  paper: {
+    paddingLeft: 15,
+    paddingRight: 15,
+  },
 }));
 
 const imageText = {
-  title: "Title of a featured post",
+  title: "Find Your Space",
   description:
-    "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
+    "Providing professional office space for all of your business needs. Conveniently located on FM 528 in Friendswood Texas.",
   image: "https://source.unsplash.com/random",
   imgText: "main image description",
 };
@@ -130,10 +186,10 @@ export default function Home() {
                     variant="subtitle1"
                     color="textSecondary"
                   >
-                    Introduction
+                    Features
                   </Typography>
                   <Typography variant="h5" gutterBottom>
-                    CLEAN DESIGN
+                    Office Lease
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -223,6 +279,246 @@ export default function Home() {
             </Grid>
           </Grid>
         </Grid>
+
+        <Grid container spacing={0} className={classes.squareText}>
+          <Grid
+            item
+            xl={12}
+            container
+            direction="column"
+            spacing={0}
+            align="Left"
+          >
+            <Typography variant="h5" gutterBottom>
+              About
+            </Typography>
+            <Typography
+              variant="body2"
+              color="textSecondary"
+              className={classes.squareTypography}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Typography
+              variant="body2"
+              color="textSecondary"
+              className={classes.squareTypography}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum
+              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </Typography>
+          </Grid>
+        </Grid>
+
+        <Grid container spacing={4} className={classes.gridSquare}>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            m={6}
+            lg={4}
+            xl={4}
+            className={classes.gridItemsSquare}
+            container
+            direction="column"
+            align="left"
+          >
+            <Grid item>
+              <Box className={classes.box} bgcolor="grey.200" mx={0.5}>
+                <Typography
+                  variant="h4"
+                  className={classes.squareAboutTypography}
+                >
+                  2
+                </Typography>
+                <Typography
+                  variant="body1"
+                  className={classes.squareAboutTypographySmall}
+                  gutterBottom
+                >
+                  Floors
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            m={6}
+            lg={4}
+            xl={4}
+            className={classes.gridItemsSquare}
+            container
+            direction="column"
+            spacing={0}
+            align="left"
+          >
+            <Grid item>
+              <Box className={classes.box} bgcolor="grey.200" mx={0.5}>
+                <Typography
+                  variant="h4"
+                  className={classes.squareAboutTypography}
+                >
+                  1000
+                </Typography>
+                <Typography
+                  variant="body1"
+                  className={classes.squareAboutTypographySmall}
+                  gutterBottom
+                >
+                  Square Feet
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            m={6}
+            lg={4}
+            xl={4}
+            className={classes.gridItemsSquare}
+            container
+            direction="column"
+            spacing={0}
+            align="left"
+          >
+            <Grid item>
+              <Box className={classes.box} bgcolor="grey.200" mx={0.5}>
+                <Typography
+                  variant="h4"
+                  className={classes.squareAboutTypography}
+                >
+                  10
+                </Typography>
+                <Typography
+                  variant="body1"
+                  className={classes.squareAboutTypographySmall}
+                  gutterBottom
+                >
+                  Rooms
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            m={6}
+            lg={4}
+            xl={4}
+            className={classes.gridItemsSquare}
+            container
+            direction="column"
+            spacing={0}
+            align="left"
+          >
+            <Grid item>
+              <Box className={classes.box} bgcolor="grey.200" mx={0.5}>
+                <Typography
+                  variant="h4"
+                  className={classes.squareAboutTypography}
+                >
+                  2
+                </Typography>
+                <Typography
+                  variant="body1"
+                  className={classes.squareAboutTypographySmall}
+                  gutterBottom
+                >
+                  Bathrooms
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            m={6}
+            lg={4}
+            xl={4}
+            className={classes.gridItemsSquare}
+            container
+            direction="column"
+            spacing={0}
+            align="left"
+          >
+            <Grid item>
+              <Box className={classes.box} bgcolor="grey.200" mx={0.5}>
+                <Typography
+                  variant="h4"
+                  className={classes.squareAboutTypography}
+                >
+                  $2000
+                </Typography>
+                <Typography
+                  variant="body1"
+                  className={classes.squareAboutTypographySmall}
+                  gutterBottom
+                >
+                  Rates start at
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            m={6}
+            lg={4}
+            xl={4}
+            className={classes.gridItemsSquare}
+            container
+            direction="column"
+            spacing={0}
+            align="left"
+          >
+            <Grid item>
+              <Box className={classes.box} bgcolor="grey.200" mx={0.5}>
+                <Typography
+                  variant="h4"
+                  className={classes.squareAboutTypography}
+                >
+                  2016
+                </Typography>
+                <Typography
+                  variant="body1"
+                  className={classes.squareAboutTypographySmall}
+                  gutterBottom
+                >
+                  Year Built
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+        </Grid>
+
         <Grid
           container
           className={classes.features}
@@ -233,7 +529,7 @@ export default function Home() {
         >
           <Grid item xs={12} sm={12}>
             <Typography variant="h5" className={classes.typographyFeatures}>
-              Lorem ipsum dolor sit amet
+              Other Key eatures
             </Typography>
             <Grid item xs={12} sm={6}>
               <Typography
