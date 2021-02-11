@@ -1,14 +1,8 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import GalleryImage from "../components/GalleryImage";
 
 // TODO - add fade animation when loading images
-const useStyles = makeStyles((theme) => ({
-  mainGrid: {
-    marginTop: theme.spacing(3),
-  },
-}));
 
 const tileData = [
   {
@@ -49,12 +43,14 @@ const tileData = [
   },
 ];
 function Gallery() {
-  const classes = useStyles();
-
   const [hover, sethover] = React.useState(false);
 
   return (
-    <div className={classes.root}>
+    <div
+      style={{
+        overflow: "hidden",
+      }}
+    >
       <Grid container spacing={2}>
         {tileData.map((post) => (
           <GalleryImage

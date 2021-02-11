@@ -87,7 +87,7 @@ export default function Footer(props) {
             </Typography>
             <Typography variant="body2" color="textSecondary">
               Summit of Friendswood is a profressional office building located
-              in Friendswood Texas. We provides leasing to small businesses.
+              in Friendswood, Texas. We provides leasing to small businesses.
               With a busy location and many food options near by, it makes the
               perfect option for you business.
             </Typography>

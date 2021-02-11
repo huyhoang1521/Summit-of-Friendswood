@@ -71,6 +71,10 @@ const useStyles = makeStyles((theme) => ({
     top: theme.spacing(1),
     color: theme.palette.grey[500],
   },
+  leaseTitle: {
+    marginTop: theme.spacing(7),
+    marginBottom: theme.spacing(1),
+  },
 }));
 
 export default function Lease() {
@@ -87,6 +91,15 @@ export default function Lease() {
         alignItems="center"
         justify="center"
       >
+        <Grid item lg={12}>
+          <Typography
+            variant="h4"
+            align="center"
+            className={classes.leaseTitle}
+          >
+            Lease
+          </Typography>
+        </Grid>
         <Grid item lg={12}>
           <Paper className={classes.paper} spacing={4}>
             <Grid container>

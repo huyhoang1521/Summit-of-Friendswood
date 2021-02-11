@@ -52,6 +52,9 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: 1.5,
     marginBottom: theme.spacing(4),
   },
+  about: {
+    marginBottom: theme.spacing(2),
+  },
   gridSquare: {
     marginBottom: theme.spacing(15),
     [theme.breakpoints.down("sm")]: {
@@ -140,7 +143,7 @@ const useStyles = makeStyles((theme) => ({
 const imageText = {
   title: "Find Your Space",
   description:
-    "Providing professional office space for all of your business needs. Conveniently located on FM 528 in Friendswood Texas.",
+    "Providing professional office space for all of your business needs. Conveniently located on FM 528 in Friendswood, Texas.",
   image: "https://source.unsplash.com/random",
   imgText: "main image description",
 };
@@ -188,13 +191,13 @@ export default function Home() {
                   >
                     Features
                   </Typography>
-                  <Typography variant="h5" gutterBottom>
-                    Office Lease
+                  <Typography variant="h6" gutterBottom>
+                    Quality Office Space
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    At the Summit of Friendswood, we provide quality office
+                    space at an affordable rate. There are many features
+                    included in our spaces.
                   </Typography>
                 </Grid>
                 <Hidden only="xs">
@@ -220,9 +223,8 @@ export default function Home() {
                 <Grid item>
                   <ApartmentIcon className={classes.icon} fontSize="large" />
                   <Typography variant="body2" color="textSecondary">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    With many layouts and configurations to choose from, we will
+                    work to find the one that is best for you business.
                   </Typography>
                 </Grid>
               </Grid>
@@ -245,9 +247,8 @@ export default function Home() {
                 <Grid item>
                   <BuildIcon className={classes.icon} fontSize="large" />
                   <Typography variant="body2" color="textSecondary">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    We provide quick building maintenance and are quick to fix
+                    any problems. Come to us with any concern you may have.
                   </Typography>
                 </Grid>
               </Grid>
@@ -270,9 +271,8 @@ export default function Home() {
                 <Grid item>
                   <AccessAlarmIcon className={classes.icon} fontSize="large" />
                   <Typography variant="body2" color="textSecondary">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
+                    Conveniently located on FM 528, with many food options near,
+                    this makes the perfect place for you business.
                   </Typography>
                 </Grid>
               </Grid>
@@ -289,40 +289,30 @@ export default function Home() {
             spacing={0}
             align="Left"
           >
-            <Typography variant="h5" gutterBottom>
-              About
+            <Typography variant="h4" gutterBottom className={classes.about}>
+              About Us
             </Typography>
             <Typography
-              variant="body2"
+              variant="body1"
               color="textSecondary"
               className={classes.squareTypography}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
+              The Summit of Friendswood was first restored in 2016 from an older
+              building. The original building was built in 1978. The process to
+              restore it was major, taking 2 years to complete. Today, the
+              building contains all new walls, bathrooms, and doors. Many things
+              from the original building can still be seen today.
             </Typography>
             <Typography
-              variant="body2"
+              variant="body1"
               color="textSecondary"
               className={classes.squareTypography}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
+              The Summit of Friendswood currently offers professional office
+              space to many types of buinesses. We work closely with our tenets
+              to help their business succeed and accomodate their special
+              business needs. Our tenents can call us anytime with any concerns
+              they may have. We will provide help and address any concerns.
             </Typography>
           </Grid>
         </Grid>
@@ -529,7 +519,7 @@ export default function Home() {
         >
           <Grid item xs={12} sm={12}>
             <Typography variant="h5" className={classes.typographyFeatures}>
-              Other Key eatures
+              Other Key Features
             </Typography>
             <Grid item xs={12} sm={6}>
               <Typography
@@ -539,8 +529,9 @@ export default function Home() {
                 align="center"
                 className={classes.typographySub}
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Many key features, a convenient location, and great tenent
+                support, make the Summit of Friendswood the best place for you
+                business.
               </Typography>
             </Grid>
           </Grid>

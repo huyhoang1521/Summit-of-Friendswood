@@ -85,7 +85,7 @@ export default function About() {
         </Grid>
         <Grid item xs={12} sm={8} gutterBottom className={classes.gridItem}>
           <Typography variant="h6" align="left" className={classes.title}>
-            <Box fontWeight="fontWeightBold">Lorem ipsum dolor sit amet</Box>
+            <Box fontWeight="fontWeightBold">A New Beginning</Box>
           </Typography>
         </Grid>
         <Grid item xs={12} sm={8} gutterBottom className={classes.gridItem}>
@@ -94,19 +94,17 @@ export default function About() {
             align="left"
             className={classes.typography}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            The Summit of Friendswood was first restored in 2016 from an older
+            building. The original building was built in 1978. The process to
+            restore it was major, taking 2 years to complete. Today, the
+            building contains all new walls, bathrooms, and doors. Many things
+            from the original building can still be seen today.
           </Typography>
           <Divider className={classes.divider} />
         </Grid>
         <Grid item xs={12} sm={8} gutterBottom className={classes.gridItem}>
           <Typography variant="h6" align="left" className={classes.title}>
-            <Box fontWeight="fontWeightBold">Lorem ipsum dolor sit amet</Box>
+            <Box fontWeight="fontWeightBold">Family Owned and Operated</Box>
           </Typography>
         </Grid>
         <Grid container xs={12} sm={8} gutterBottom>
@@ -132,25 +130,22 @@ export default function About() {
               align="left"
               className={classes.typography}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Founder Khanh Hoang first saw the building in 2015 and saw an
+              opportunity to turn it around. Knowing nothing about restoring
+              buildings, he quickly learned the process. He then started his own
+              company, KCTY, with the help of his sister, Yen Nguyen, and
+              brother in law, Tuan Nguyen. Together, they manage and operate the
+              building and provide assistence to all tenents.
             </Typography>
             <Typography
               variant="body2"
               align="left"
               className={classes.typography}
             >
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
+              As a small family run operation, we are dedicated to supporting
+              our tenents and providing our assistence to any problems they may
+              have. We will work with your business to help you suceed and
+              provide any help we can.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12}>
@@ -160,7 +155,9 @@ export default function About() {
 
         <Grid item xs={12} sm={8} gutterBottom className={classes.gridItem}>
           <Typography variant="h6" align="left" className={classes.title}>
-            <Box fontWeight="fontWeightBold">Lorem ipsum dolor sit amet</Box>
+            <Box fontWeight="fontWeightBold">
+              Dedicated to Providing Quality Office Space
+            </Box>
           </Typography>
         </Grid>
         <Grid item xs={12} sm={8} className={classes.gridItem}>
@@ -169,24 +166,13 @@ export default function About() {
             align="left"
             className={classes.typography}
           >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
+            At the Summit of Friendswood, we are dedicated to providing quality
+            office space to your business. As a newly renovated building, we
+            ensure that you will be getting a quality space for you business. In
+            addition, we aim to provide the best customer service and address
+            any concerns you may have. With a great location and affordable
+            rates, the Summit of Friendswood is the perfect place for your
+            business.
           </Typography>
         </Grid>
         <Grid
