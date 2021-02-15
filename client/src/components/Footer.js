@@ -102,45 +102,83 @@ export default function Footer(props) {
             >
               Pages
             </Typography>
+            <Link
+              color="inherit"
+              noWrap
+              key={"Home"}
+              variant="body2"
+              href="/"
+              style={{ textDecoration: "none" }}
+              className={classes.title}
+            >
+              <Typography
+                variant="body2"
+                gutterBottom
+                align="left"
+                className={classes.typography}
+                color="textSecondary"
+              >
+                Home
+              </Typography>
+            </Link>
 
-            <Typography
+            <Link
+              color="inherit"
+              noWrap
+              key={"Lease"}
               variant="body2"
-              gutterBottom
-              align="left"
-              className={classes.typography}
-              color="textSecondary"
+              href="/lease"
+              style={{ textDecoration: "none" }}
+              className={classes.title}
             >
-              Home
-            </Typography>
-
-            <Typography
+              <Typography
+                variant="body2"
+                gutterBottom
+                align="left"
+                className={classes.typography}
+                color="textSecondary"
+              >
+                Lease
+              </Typography>
+            </Link>
+            <Link
+              color="inherit"
+              noWrap
+              key={"About"}
               variant="body2"
-              gutterBottom
-              align="left"
-              className={classes.typography}
-              color="textSecondary"
+              href="/about"
+              style={{ textDecoration: "none" }}
+              className={classes.title}
             >
-              Lease
-            </Typography>
-
-            <Typography
+              <Typography
+                variant="body2"
+                gutterBottom
+                align="left"
+                className={classes.typography}
+                color="textSecondary"
+              >
+                About
+              </Typography>
+            </Link>
+            <Link
+              color="inherit"
+              noWrap
+              key={"Contact"}
               variant="body2"
-              gutterBottom
-              align="left"
-              className={classes.typography}
-              color="textSecondary"
+              href="/contact"
+              style={{ textDecoration: "none" }}
+              className={classes.title}
             >
-              About
-            </Typography>
-            <Typography
-              variant="body2"
-              gutterBottom
-              align="left"
-              className={classes.typography}
-              color="textSecondary"
-            >
-              Contact
-            </Typography>
+              <Typography
+                variant="body2"
+                gutterBottom
+                align="left"
+                className={classes.typography}
+                color="textSecondary"
+              >
+                Contact
+              </Typography>
+            </Link>
           </Grid>
           <Grid item xs={4} sm={3} md={2} lg={2}>
             <Typography
